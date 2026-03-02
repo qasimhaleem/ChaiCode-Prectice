@@ -9,7 +9,7 @@ const PasswrodGenerator = () => {
     const [password, setPassword] = useState("")
     // generating password with index
     const passGeneratore = useCallback(() => {
-        let pass = ""
+        let pass = " ";
         let str = "asdfghjlzxcvbnmqwertyuiop";
         if (numAllowed) {
             str += "1234567890"
@@ -38,32 +38,27 @@ const PasswrodGenerator = () => {
                             className='border bg-white text-black rounded-l-lg p-2 gap-4'
                             value={password}
                             readOnly
-
                         />
                         <button className='bg-blue-600 p-2 rounded-r-lg text-lg top-1 text-white font-semibold'>Copy</button>
                     </div>
-                    <div className='pt-5 text-white gap-x-2'>
+                    <div className='pt-5 text-white gap-x-2 flex justify-between items-center gap-10'>
                         <input
                             type="range"
                             value={length}
                             min={4}
                             max={100}
                             onChange={(e) => setLength(e.target.value)} />
-
                         <label htmlFor="">Lenth(2)</label>
                         <input type="checkbox"
-                            onClick={(prev) => !prev}
-                            defaultChecked={numAllowed} />
+                            onChange={() => setNumAllowed((prev) => !prev)}
+                            checked={numAllowed} />
                         <label htmlFor="">Number</label>
                         <input type="checkbox"
-                            onChange={() => setNumAllowed((prev) => !prev)}
+                            onChange={() => setCharAllowed((prev) => !prev)}
                             Checked={charAllowed} />
                         <label htmlFor="">character</label>
                     </div>
                 </div>
-
-
-
             </div>
         </>
     )
