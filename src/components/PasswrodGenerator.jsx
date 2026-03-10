@@ -48,7 +48,7 @@ const PasswrodGenerator = () => {
                             min={4}
                             max={100}
                             onChange={(e) => setLength(e.target.value)} />
-                        <label htmlFor="">Lenth(2)</label>
+                        <label htmlFor="">Length({length})</label>
                         <input type="checkbox"
                             onChange={() => setNumAllowed((prev) => !prev)}
                             checked={numAllowed} />
