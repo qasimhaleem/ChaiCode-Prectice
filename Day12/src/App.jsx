@@ -5,7 +5,7 @@ import useCurrency from './Hoos/useCurrency'
 function App() {
   const [amount, setAmount] = useState(0)
   const [from, setFrom] = useState("usd")
-  const [to, setTo] = useState("inr")
+  const [to, setTo] = useState("pkr")
   const [convertedAmount, setConvertedAmount ] = useState(0)
 
   const cunrrencyInfo = useCurrency(from)
@@ -25,7 +25,7 @@ function App() {
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
-                backgroundImage: `url('https://randomuser.me/api/portraits/men/15.jpg')`,
+                backgroundImage: `url('https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg')`,
             }}
         >
             <div className="w-full">
